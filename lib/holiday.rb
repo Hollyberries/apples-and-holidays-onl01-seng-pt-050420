@@ -113,13 +113,12 @@ end
 
 
 def all_supplies_in_holidays(holiday_hash)
-  new_array = []
-   holiday_hash.collect do |a, b|
-   puts "#{a.to_s.capitalize}:"
+   holiday_hash.each do |season, holiday|
+   puts "#{season.to_s.capitalize}:"
+   holiday.each do |event, supplies|
+   puts  "#{event.to_s.split(" ").map {|x| x.capitalize}.join(" ")}:" "#{supplies.join(", ")}"
    
-   
-    
-    
+   end
     end
   
   
